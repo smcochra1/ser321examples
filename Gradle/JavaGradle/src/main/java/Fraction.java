@@ -41,16 +41,37 @@ public class Fraction {
       try {
          // create a new instance
          // Fraction *frac = [[Fraction alloc] init];
+         int argX;
+         int argY;
          Fraction frac = new Fraction();
-
+         if(args.length ==2){
+            argX = 0;
+            argY = 0;
+            try{
+               argX = Integer.parseInt(args[0]);
+               argY = Integer.parseInt(args[1]);
+            }catch (Exception e){
+               System.out.println("Arguments: " + args[0] + ", " + args[1] + " must be integers.");
+               System.exit(1);
+            }
+           frac.setNumerator(argX);
+           frac.setDenominator(argY); 
+           frac.print();
+           System.out.println("");
+         }else{
+            frac.setNumerator(1);
+            frac.setDenominator(3);
+            frac.print();
+            System.out.println("");
+         }
          // set the values
-         frac.setNumerator(1);
-         frac.setDenominator(3);
+         //frac.setNumerator(1);
+         //frac.setDenominator(3);
 
          // print it
-         System.out.print("The fraction is: ");
-         frac.print();
-         System.out.println("");
+        // System.out.print("The fraction is: ");
+         //frac.print();
+         //System.out.println("");
 
       }catch(Exception e) {
          e.printStackTrace();

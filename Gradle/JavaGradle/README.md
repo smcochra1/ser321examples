@@ -15,6 +15,7 @@ Take a look at the build.gradle file and run all the different taks and play aro
 
 
 #2. Compiling and running the debugger from the command line#
+#this is a test#
 
 cd src/main/java
 javac -d . -g Fraction.java
